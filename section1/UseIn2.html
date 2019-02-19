@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Input JS</title>
+
+</head>
+<body>
+	<canvas height="500" width="500" style="border:2px solid #000000" id="ctx"/>
+	<script>
+		var ctx = document.getElementById("ctx").getContext("2d");
+        document.getElementById("ctx").onmousedown = function () {
+        	ctx.fillStyle = "blue";
+ 			ctx.fillRect(100,100,50,50);
+        }
+
+        document.getElementById("ctx").onmouseup = function () {
+        	ctx.fillStyle = "red";
+ 		ctx.fillRect(100,100,50,50);
+        }
+
+        document.onkeydown = function(event) {
+        	
+        	if (event.keyCode == 65) {
+        	       ctx.filledText("A is pressed", 400 350);
+        	}
+        	else if (event.keyCode == 32) {
+        		ctx.fillText("Space bar is pressed", 250,350);
+        	}
+        }
+
+	</script>
+
+</body>
+</html>
